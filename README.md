@@ -25,12 +25,18 @@ The proposed model comprises of 3 Neural networks, one of which is a pretrained 
 * The 1st network (NN-1) is trained on the tabular/relational dataset (all the attributes after feature engineering are categorical) with the actual labels.
 * Trained NN-1 output is then used to prepare the input for the 2nd network (NN-2). An 1-D feature vector (*feature_vec2*) is extracted from a Dense layer of the trained NN-1.
 * Both feature vectors (*feature_vec1* and *feature_vec2* - both 1D) are then concatenated to form a new 1-D feature vector which forms the input for training NN-2
-* The architecture can be imagined to be similar to the following figure (except the pretrained network is missing which takes in the continous data):
+* The architecture can be imagined to be something similar to the following (except the pretrained network is missing which takes in the continous data):
 
-[Image taken from StackExchange]()
-![alt text]
+[Image taken from StackExchange](https://datascience.stackexchange.com/questions/29634/how-to-combine-categorical-and-continuous-input-features-for-neural-network-trai)
+![alt text](https://i.stack.imgur.com/QgQFq.png)
+
 ## Technology
 
-Keras(latest version) with Tensorflow 2.2 has been used in the project. Python 3.7.x has been used to programme the solution. Should work with any python version >= 3.5
+Keras(latest version) with Tensorflow 2.2 has been used in the project. Python 3.7.x has been used to programme the solution. Should work with any python version >= 3.5. Training the 1st network (NN-1) can be done on CPU, whereas the NN-2 training require GPU computation (TPU recommended), as batches of data (tabular + image) are generated dynamically (preprocessing of images done on the generated batch before feeding into the net) during training. 
+
+## Additional
+
+* The ADD (Architectural Decisions Document) can be found in the repo along with the notebook
+* A gist of the notebook - [notebook gist](https://gist.github.com/abhilash97/11945d1cdfe5658432d59932f1baeb88)
 
 
