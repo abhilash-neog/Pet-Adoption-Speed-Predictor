@@ -38,5 +38,6 @@ Keras(latest version) with Tensorflow 2.2 has been used in the project. Python 3
 
 * The ADD (Architectural Decisions Document) can be found in the repo along with the notebook
 * A gist of the notebook - [notebook gist](https://gist.github.com/abhilash97/11945d1cdfe5658432d59932f1baeb88)
+* Project Presentation (with a demo of the notebook) can be found [here](https://www.youtube.com/watch?v=iqC-eZujNwE)
 
 
